@@ -1,0 +1,17 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Não conta a margin e o padding no tamanho total */
+    font-family: 'Outfit', sans-serif;
+}
+
+ul
+{
+    list-style: none;
+}
+
+h2, h3, h4, p
+{
+    font-size: 100%;
+}

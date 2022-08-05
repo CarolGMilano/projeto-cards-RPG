@@ -1,0 +1,565 @@
+/****************** Body ******************/
+
+body
+{
+    background-image: url("../imagens/fundo_body.gif");
+    background-repeat: round;
+    background-size: cover; /* Cobre todo o body */
+    min-height: 100vh; /* Ocupa 100% da altura*/
+    backdrop-filter: blur(6px);
+}
+
+/****************** Cabeçalho ******************/
+
+.cabecalho
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 50px;
+}
+
+.cabecalho img
+{
+    width: 50px;
+}
+
+.cabecalho h1
+{
+    color: #f1ecff;
+}
+
+/****************** Botões ******************/
+
+.cartao button
+{
+    border-radius: 50px; 
+    width: 70px;
+    height: 70px;
+    border: 0;
+    cursor: pointer;
+    background-color: #f1ecff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: background-color 0.2s ease;
+}
+
+.cartao button:hover
+{
+    background-color: rgba(169, 122, 230, 0.5);
+}
+
+.btn-voltar
+{
+   transform: rotateY(180deg); 
+}
+
+/****************** Cartão ******************/
+
+.cartao
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.lista_cartoes
+{
+    width: 580px;
+    height: 750px;
+    position: relative;
+}
+
+.item_cartao
+{
+    opacity: 0; /*0: Esconde; 1: Aparece;*/
+    height: 100%;
+    justify-content: space-between;
+    position: absolute;
+    padding: 12px;
+    border-radius: 10px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fundo_cartao-1
+{
+    background: url("../imagens/fundo_druida.jpg") no-repeat ;
+    background-size: cover;
+    box-shadow: rgba(29, 231, 22, 0.56) 0px 22px 70px 4px;
+}
+
+.fundo_cartao-2
+{
+    background: url("../imagens/fundo_guerreiro.jpg") no-repeat;
+    background-size: cover;
+    
+    box-shadow: rgba(231, 22, 22, 0.56) 0px 22px 70px 4px;
+}
+
+.fundo_cartao-3
+{
+    background: url("../imagens/fundo_clerigo.jpg") no-repeat;
+    background-size: cover;
+    box-shadow: rgba(231, 210, 22, 0.56) 0px 22px 70px 4px;
+}
+
+.fundo_cartao-4
+{
+    background: url("../imagens/fundo_ladino.jpg") no-repeat;
+    background-size: cover;
+    box-shadow: rgba(25, 22, 231, 0.56) 0px 22px 70px 4px;
+}
+
+.fundo_cartao-5
+{
+    background: url("../imagens/fundo_artifice.jpg") no-repeat;
+    background-size: cover;
+    box-shadow: rgba(22, 231, 231, 0.56) 0px 22px 70px 4px;
+}
+
+.fundo_cartao-6
+{
+    background: url("../imagens/fundo_guardiao.jpg") no-repeat;
+    background-size: cover;
+    box-shadow: rgba(231, 22, 196, 0.56) 0px 22px 70px 4px;
+}
+
+.cartao li.selecionado /* Cê tem que colocar que, só vai acontecer isso no elemento que tem a classe "selecionado" DENTRO da li */
+{
+    opacity: 1;
+    z-index: 1; /* Força o elemento a vir pra frente dos outros. É como se puxasse a carta que está com a classe "selecionado" para cima, sobrepondo os outros. */
+}
+
+/****************** Cartão-cabeçalho ******************/
+
+.cabecalho_cartao
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.cabecalho_cartao-cor1
+{
+    background-color: rgba(147, 243, 144, 0.4);
+}
+
+.cabecalho_cartao-cor2
+{
+    background-color: rgba(240, 150, 147, 0.4);
+}
+
+.cabecalho_cartao-cor3
+{
+    background-color: rgba(240, 230, 147, 0.4);
+}
+
+.cabecalho_cartao-cor4
+{
+    background-color: rgba(147, 153, 240, 0.4);
+}
+
+.cabecalho_cartao-cor5
+{
+    background-color: rgba(147, 245, 245, 0.4);
+}
+
+.cabecalho_cartao-cor6
+{
+    background-color: rgba(240, 147, 220, 0.4);
+}
+
+.nome_personagem
+{
+    margin: 5px;
+    width: 150px;
+}
+
+.nome_personagem h2
+{
+    border-bottom: 1px solid #000000;
+    font-size: 1.5em;
+    color: #f4ffec;
+    text-shadow: black 0.5px 0.5px 0.1em;
+    text-align: center;
+}
+
+.itens_grid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 20px;
+    grid-template-areas: 
+        "posicao1 posicao2"
+        "posicao3 posicao3"    
+    ;
+}
+
+.itens_grid h3
+{
+    text-align: center;
+    color: #f1ecff;
+    text-shadow: black 0.5px 0.5px 0.1em;
+}
+
+.itens_grid h4
+{
+    text-align: center;
+    font-size: 1em;
+}
+
+.itens_grid p
+{
+    border-top: 1px solid;
+    font-size: .9em; 
+}
+
+.grid_classe
+{
+    grid-area: posicao1;
+}
+
+.grid_raca
+{
+    grid-area: posicao2;
+}
+
+.grid_tendencia
+{
+    grid-area: posicao3;
+}
+
+.corpo_cartao
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "tributo feature feature feature"
+        "tributo imagem imagem imagem"
+        "tributo imagem imagem imagem"
+    ;
+}
+
+/****************** Cartão-tributos ******************/
+
+.tributos
+{
+    text-align: center;
+    padding: 5px;
+    margin: 12px 5px 0 0 ;
+    grid-area: tributo;
+    background-color: rgba(165, 153, 156, 0.5);
+    border-radius: 5px;
+}
+
+.tributos li
+{
+    margin: 30px 2px 35px 2px;
+}
+
+.tributos_cor1, .tributos_cor2, .tributos_cor3, .tributos_cor4, .tributos_cor5, .tributos_cor6
+{
+    background-color: rgba(0, 0, 0, 0.7);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 5px;
+    color: #f1ecff;
+    border: none;
+    transition: 1ms;
+}
+
+.tributos_cor1:hover
+{
+    background-color: rgba(29, 231, 22, 0.5);
+    text-shadow: black 0.5px 0.5px 0.1em;
+}
+
+.tributos_cor2:hover
+{
+    background-color: rgba(231, 22, 22, 0.5);
+    text-shadow: black 0.5px 0.5px 0.1em;
+}
+
+.tributos_cor3:hover
+{
+    background-color: rgba(231, 210, 22, 0.5);
+    text-shadow: black 0.5px 0.5px 0.1em;
+}
+
+.tributos_cor4:hover
+{
+    background-color: rgba(25, 22, 231, 0.5);
+    text-shadow: black 0.5px 0.5px 0.1em;
+}
+
+.tributos_cor5:hover
+{
+    background-color: rgba(22, 231, 231, 0.5);
+    text-shadow: black 0.5px 0.5px 0.1em;
+}
+
+.tributos_cor6:hover
+{
+    background-color: rgba(231, 22, 196, 0.5);
+    text-shadow: black 0.5px 0.5px 0.1em;
+}
+
+.tributos li p
+{
+    background-color: rgba(229, 228, 226, 0.7);
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    font-weight: bold;
+    padding: 2px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+.tributos p.modificador
+{
+    border-radius: 100px;
+    text-align: center;
+}
+
+.pontos
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.proficiencia_druida
+{
+    background-color: rgba(29, 231, 22, 0.5);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 5px;
+    color: #f1ecff;
+    border: none;
+    text-shadow: black 0.5px 0.5px 0.1em;
+    transition: 1ms;
+}
+
+.proficiencia_druida:hover
+{
+    background-color: rgba(29, 231, 22, 0.8);
+}
+
+.proficiencia_guerreiro
+{
+    background-color: rgba(231, 22, 22, 0.5);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 5px;
+    color: #f1ecff;
+    border: none;
+    text-shadow: black 0.5px 0.5px 0.1em;
+    transition: 1ms;
+}
+
+.proficiencia_guerreiro:hover
+{
+    background-color: rgba(231, 22, 22, 0.8);
+}
+
+.proficiencia_clerigo
+{
+    background-color: rgba(231, 210, 22, 0.5);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 5px;
+    color: #f1ecff;
+    border: none;
+    text-shadow: black 0.5px 0.5px 0.1em;
+    transition: 1ms;
+}
+
+.proficiencia_clerigo:hover
+{
+    background-color: rgba(231, 210, 22, 0.8);
+}
+
+.proficiencia_ladino
+{
+    background-color: rgba(25, 22, 231, 0.5);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 5px;
+    color: #f1ecff;
+    border: none;
+    text-shadow: black 0.5px 0.5px 0.1em;
+    transition: 1ms;
+}
+
+.proficiencia_ladino:hover
+{
+    background-color: rgba(25, 22, 231, 0.8);
+}
+
+.proficiencia_artifice
+{
+    background-color: rgba(22, 231, 231, 0.5);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 5px;
+    color: #f1ecff;
+    border: none;
+    text-shadow: black 0.5px 0.5px 0.1em;
+    transition: 1ms;
+}
+
+.proficiencia_artifice:hover
+{
+    background-color: rgba(22, 231, 231, 0.8);
+}
+
+.proficiencia_guardiao
+{
+    background-color: rgba(231, 22, 196, 0.5);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 5px;
+    color: #f1ecff;
+    border: none;
+    text-shadow: black 0.5px 0.5px 0.1em;
+    transition: 1ms;
+}
+
+.proficiencia_guardiao:hover
+{
+    background-color: rgba(231, 22, 196, 0.8);
+}
+
+/****************** Cartão-caracteristicas ******************/
+
+.caracteristicas
+{
+    grid-area: feature;
+    padding: 15px 50px;
+}
+
+.grid_armadura
+{
+    grid-area: posicao1;
+    background-color: rgba(214, 209, 209, 0.5);
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.grid_armadura:hover
+{
+    background-color: rgba(214, 209, 209, 0.7);
+    transition: all 0.5ms;
+}
+
+.grid_vida
+{
+    grid-area: posicao2;
+    background-color: rgba(214, 209, 209, 0.5);
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.grid_vida:hover
+{
+    background-color: rgba(214, 209, 209, 0.7);
+    transition: all 0.5ms;
+}
+
+.grid_deslocamento
+{
+    grid-area: posicao3;
+    background-color: rgba(214, 209, 209, 0.5);
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.grid_deslocamento:hover
+{
+    background-color: rgba(214, 209, 209, 0.7 );
+    transition: all 0.5ms;
+}
+
+/****************** Cartão-imagem ******************/
+
+.container-imagem
+{
+    grid-area: imagem;
+    text-align: center;
+    height: min-content;
+}
+
+.container-imagem img
+{
+    max-width: 100%;
+    max-height: 459px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+/****************** Cartão-história ******************/
+
+.descricao_cartao
+{
+    grid-column: 2 / span 3;
+    grid-row: 3;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    height: min-content;
+}
+
+.sombra_historia1
+{
+    box-shadow: rgba(29, 231, 22, 0.56) 0px 22px 70px 4px;
+}
+
+.sombra_historia2
+{
+    box-shadow: rgba(240, 150, 147, 0.56) 0px 22px 70px 4px;
+}
+
+.sombra_historia3
+{
+    box-shadow: rgba(231, 210, 22, 0.56) 0px 22px 70px 4px;
+}
+
+.sombra_historia4
+{
+    box-shadow: rgba(147, 153, 240, 0.56) 0px 22px 70px 4px;
+}
+
+.sombra_historia5
+{
+    box-shadow: rgba(22, 231, 231, 0.56) 0px 22px 70px 4px;
+}
+
+.sombra_historia6
+{
+    box-shadow: rgba(240, 147, 220, 0.56) 0px 22px 70px 4px;
+}
+
+.descricao_cartao h3
+{
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #f1ecff;
+    font-size: 15px;
+    padding: 12px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.descricao_cartao p
+{
+    font-size: 14px;
+    padding: 10px;
+    text-align: justify;
+    max-height: 106px;
+    overflow-y: auto;
+}
