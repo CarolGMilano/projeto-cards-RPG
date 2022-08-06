@@ -125,10 +125,10 @@ body
     box-shadow: rgba(231, 22, 196, 0.56) 0px 22px 70px 4px;
 }
 
-.cartao li.selecionado /* Cê tem que colocar que, só vai acontecer isso no elemento que tem a classe "selecionado" DENTRO da li */
+.cartao li.selecionado 
 {
     opacity: 1;
-    z-index: 1; /* Força o elemento a vir pra frente dos outros. É como se puxasse a carta que está com a classe "selecionado" para cima, sobrepondo os outros. */
+    z-index: 1; 
 }
 
 /****************** Cartão-cabeçalho ******************/
