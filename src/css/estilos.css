@@ -456,7 +456,6 @@ body
 .grid_armadura:hover
 {
     background-color: rgba(214, 209, 209, 0.7);
-    transition: all 0.5ms;
 }
 
 .grid_vida
@@ -470,7 +469,6 @@ body
 .grid_vida:hover
 {
     background-color: rgba(214, 209, 209, 0.7);
-    transition: all 0.5ms;
 }
 
 .grid_deslocamento
@@ -483,8 +481,7 @@ body
 
 .grid_deslocamento:hover
 {
-    background-color: rgba(214, 209, 209, 0.7 );
-    transition: all 0.5ms;
+    background-color: rgba(214, 209, 209, 0.7);
 }
 
 /****************** Cartão-imagem ******************/
